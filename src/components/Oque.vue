@@ -4,11 +4,11 @@
       <h1>O que faço</h1>
       <img src="../assets/healthicons-factory-worker-outline@2x.svg"/>
     </div>
-    <p>
-        Ajudo empersas e profissionais a solucionarem seus problemas por meio de metodologias consolidadas,
+    <div class="descri">
+        Ajudo empresas e profissionais a solucionarem seus problemas por meio de metodologias consolidadas,
         experiência, e, principalmente, agregando as competências necessárias através de uma rede de relacionamentos,
         focada na inovação tecnológica
-    </p>
+    </div>
   </div>
 </template>
 
@@ -29,14 +29,15 @@ export default class Oque extends Vue {
       flex-direction: column;
       background: #C1d37f;
       width: 100%;
-      height: 370px;
+      // height: 370px;
       overflow-x: auto;
       overflow-y: hidden;
+      align-items: center;
       @media screen and (min-width: $small) {
-          height: 276px;
+        height: 276px;
           flex-direction: row;
+          align-items: center;  
           justify-content: space-evenly;
-          align-items: center;
       }
       &:before {
           content: "";
@@ -68,10 +69,11 @@ export default class Oque extends Vue {
             width: 96px;
         }
       }
-      p {
+      div.descri {
           z-index: 2;
-          width: calc(100% - 2*4vw);
-          max-width: 40vw;
+          // width: calc(100% - 2*4vw);
+          width: 90%;
+          // max-width: 40vw;
           margin: 10px 4vw;
         //   padding: 10px 4vw;
       }
