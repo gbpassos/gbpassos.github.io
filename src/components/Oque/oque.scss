@@ -1,0 +1,56 @@
+$small: 640px;
+$medium: 940px;
+div.oQueContainer {
+    font-family: 'Libre Franklin', "Helvetica", "Arial", "sans-serif";
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    background: #C1d37f;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    @media screen and (min-width: $small) {
+      height: 276px;
+        flex-direction: row;
+        align-items: center;  
+        justify-content: space-evenly;
+    }
+    &:before {
+        content: "";
+      position: absolute;
+      width: 100%;
+      height: 370px;
+      z-index: 1;
+      background: url('../../assets/graphic.png'), #C1d37f;
+      background-repeat: no-repeat, repeat;
+      background-blend-mode: multiply, normal;
+      background-size: 180%;
+      background-position-y: 20%;
+      filter: opacity(0.2);
+      @media screen and (min-width: $small) {
+          height: 276px;
+      }
+    }  
+    div.title {
+        margin-top: 10px;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        h1 {
+            font-size: 36px;
+        }
+        img {
+            width: 96px;
+        }
+    }
+    div.descri {
+        z-index: 2;
+        // width: calc(100% - 2*4vw);
+        width: 90%;
+        // max-width: 40vw;
+        margin: 10px 4vw;
+    //   padding: 10px 4vw;
+    }
+}
