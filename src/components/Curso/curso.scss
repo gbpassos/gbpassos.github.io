@@ -1,0 +1,13 @@
+div.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    div {
+        font-family: 'Libre Franklin', sans-serif;
+        font-style: normal;
+
+    }
+    div.descricao {
+        text-align: center;
+    }
+}
