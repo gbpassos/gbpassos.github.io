@@ -18,18 +18,45 @@ const cards = {
     "Cenários estratégicos de empreendedorismo": "O caderno é uma coletânia de artigos de trabalhos de vários autores apresentados durante as atividades do ano de 2014 da Incubadora Tecnológica do TECPAR."
 }
 
+const resultadosContainer = {
+    "background-color": "#F0E2A3",
+    display: "flex",
+    "flex-direction": "column",
+    padding: "2%",
+}
+
+const titleStyle = {
+    "text-align": "center"
+}
+
+const tiposStyle = {
+    display: "flex",
+    "flex-direction": "row",
+    "flex-wrap": "wrap",
+    "justify-content": "center",
+    "gap": "10px",
+}
+
+const listaStyle = {
+    display: "flex",
+    "flex-direction": "row",
+    "flex-wrap": "wrap",
+    "justify-content": "space-around",
+    "gap": "10px",
+}
+
 const Resultados = () => {
     return (
-        <div>
-            <h1>Principais Resultados</h1>
-            <div class="tipos">
+        <div style={resultadosContainer}>
+            <h1 style={titleStyle}>Principais Resultados</h1>
+            <div style={tiposStyle}>
                 {
                     botoes.map((botao) => (
                         <Botao label={botao}/>
                     ))
                 }
             </div>
-            <div class="lista">
+            <div style={listaStyle}>
                 {
                     Object.keys(cards).map((key) => (
                         <Card titulo={key}>{cards[key]}</Card>

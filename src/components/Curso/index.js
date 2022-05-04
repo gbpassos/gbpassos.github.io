@@ -23,7 +23,7 @@ const Curso = ({ano, icon, children}) => {
     return (
         <div style={containerStyle}>
             <Icon icon={icon} style={iconStyle}/>
-            <div style={descricaoStyle}>{ ano }</div>
+            <div style={descricaoStyle}><b>{ ano }</b></div>
             <div style={descricaoStyle}>{ children }</div>
         </div>
     )

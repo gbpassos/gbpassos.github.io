@@ -12,7 +12,7 @@ const Formacao = () => {
                 <h1>Formação</h1>
             </div>
             <div class="lista">
-                <Curso ano="1993" icon="flat-color-icons:electronics">Técnico em Eletrônica CEFET-PR</Curso>
+                <Curso ano="1993" icon="iconoir:electronics-chip">Técnico em Eletrônica CEFET-PR</Curso>
                 <Curso ano="2000" icon="mdi:radio-tower">Engenharia Industrial Elétrica com ênfase em Eletrônica e Telecomunicações CEFET-PR</Curso>
                 <Curso ano="2013" icon="la:industry">Mestre em Engenharia da Produção UFPR</Curso>
                 <Curso ano="2010" icon="carbon:ai-results">Especialização em Gestão Estratégica de Tecnologia e Inovação UTFPR</Curso>
