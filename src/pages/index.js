@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import Formacao from '../components/Formacao'
 import Top from '../components/Top'
 import Oque from '../components/Oque'
+import Experiencia from "../components/Experiencia"
+import Resultados from "../components/Resultados"
 
 const IndexPage = () => {
   return (
@@ -11,6 +13,8 @@ const IndexPage = () => {
       <Top/>
       <Oque/>
       <Formacao/>
+      <Experiencia/>
+      <Resultados/>
       <Link to="/artigos">
         Artigos
       </Link>
