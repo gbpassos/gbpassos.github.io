@@ -5,6 +5,13 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
+    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        typeName: `Yaml`, // a fixed string
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -12,7 +19,6 @@ module.exports = {
         path: `${__dirname}/src/artigos`,
       }
     },
-    "gatsby-plugin-mdx",
     // "gatsby-plugin-image",
     // "gatsby-plugin-sharp",    
   ]

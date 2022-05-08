@@ -23,3 +23,27 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+// query MyQuery {
+//   allYaml {
+//     nodes {
+//       formacao {
+//         onde
+//         quando
+//       }
+//       nome
+//       what
+//       experiencia {
+//         descricao
+//         oque
+//         tags
+//       }
+//       resultados {
+//         categoria
+//         pagina
+//         resumo
+//         titulo
+//       }
+//     }
+//   }
+// }
