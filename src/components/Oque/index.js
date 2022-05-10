@@ -1,18 +1,16 @@
 import * as React from 'react'
-import icone from "../../assets/healthicons-factory-worker-outline@2x.svg"
-import './oque.scss'
+import icone from "@/assets/healthicons-factory-worker-outline@2x.svg"
+import * as style from './oque.module.scss'
 
-const Oque = () => {
+const Oque = ({children}) => {
     return (
-        <div class="oQueContainer">
-            <div class="title">
+        <div className={style.oQueContainer}>
+            <div className={style.title}>
                 <h1>O que faço</h1>
                 <img src={icone} alt="icone"/>
             </div>
-            <div class="descri">
-                Ajudo empresas e profissionais a solucionarem seus problemas por meio de metodologias consolidadas,
-                experiência, e, principalmente, agregando as competências necessárias através de uma rede de relacionamentos,
-                focada na inovação tecnológica
+            <div className={style.descri}>
+                {children}
             </div>
         </div>
     )

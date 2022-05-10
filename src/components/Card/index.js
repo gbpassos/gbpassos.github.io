@@ -1,14 +1,11 @@
 import * as React from 'react'
+import {Link} from 'gatsby'
+import * as style from './card.module.scss'
 
-const cardStyle = {
-    "max-width": "400px",
-    "min-width": "300px"
-}
-
-const Card = ({titulo, children}) => {
+const Card = ({titulo, link, children}) => {
     return (
-        <div style={cardStyle}>
-            <h2>{titulo}</h2>
+        <div className={style.card}>
+            <Link to={"artigos/" + link}><h2>{titulo}</h2></Link>
             <div>
                 {children}
             </div>

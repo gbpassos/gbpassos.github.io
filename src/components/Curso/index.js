@@ -1,30 +1,13 @@
 import * as React from 'react'
 import { Icon } from '@iconify/react'
-
-const containerStyle = {
-    display: "flex",
-    "flex-direction": "column",
-    "align-items": "center",
-    margin: "0px 10px",
-    gap: "1em"
-}
-
-const descricaoStyle = {
-    "font-family": ['Libre Franklin', 'sans-serif'],
-    "font-style": "normal",
-    "text-align": "center"
-}
-
-const iconStyle = {
-    "font-size": "300%"
-}
+import * as style from './curso.module.scss'
 
 const Curso = ({ano, icon, children}) => {
     return (
-        <div style={containerStyle}>
-            <Icon icon={icon} style={iconStyle}/>
-            <div style={descricaoStyle}><b>{ ano }</b></div>
-            <div style={descricaoStyle}>{ children }</div>
+        <div className={style.container}>
+            <Icon icon={icon} className={style.icon}/>
+            <div className={style.descricao}><b>{ ano }</b></div>
+            <div className={style.descricao}>{ children }</div>
         </div>
     )
 }

@@ -1,6 +1,8 @@
 div.container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1em;
     margin: 0px 10px;
     div {
         font-family: 'Libre Franklin', sans-serif;
@@ -9,5 +11,8 @@ div.container {
     }
     div.descricao {
         text-align: center;
+    }
+    .icon {
+        font-size: 300%;
     }
 }

@@ -4,12 +4,16 @@
   formacao:
     - quando: 1993
       onde: Técnico em Eletrônica CEFET-PR
+      icon: iconoir:electronics-chip
     - quando: 2000
       onde: Engenharia Industrial Elétrica com ênfase em Eletrônica e Telecomunicações CEFET-PR
+      icon: mdi:radio-tower
     - quando: 2010
       onde: Especialização em Gestão Estratégica de Tecnologia e Inovação UTFPR
+      icon: la:industry
     - quando: 2013
       onde: Mestre em Engenharia da Produção UFPR
+      icon: carbon:ai-results
   experiencia:
     - oque: Desenvolvimento, testes, instalação e produção de sistemas embarcados
       descricao: Durante os primeiros anos trabalhando como técnico em eletrônico e estagiário de engenharia eletrônica, desenvolvi, aprimorei, testei e realizei outras atividades relacionadas a fabricação e testes de sistemas monitorados remotos, na empresa que desenvolveu o primeiro prédio inteligente de Curitiba/PR.
