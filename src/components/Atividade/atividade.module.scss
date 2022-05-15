@@ -1,4 +1,52 @@
+@import "../../css/global.scss";
 .atividade {
-    max-width: 400px;
+    font-family: $font-family;
+    max-width: 350px;
     min-width: 300px;
+    h2 {
+        font-size: 16px;
+    }
+    div {
+        font-size: 14px;
+        display: none;
+        @media screen and (min-width: $medium) {
+            display: block;
+        }
+    }
+    .showmore {
+        &::before {
+            content: "^";
+            display: none;
+            @media screen and (min-width: $medium) {
+                display: block;
+            }
+        }
+        &::after {
+            content: "v";
+            display: block;
+            @media screen and (min-width: $medium) {
+                display: none;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
+.tag_container {
+    margin: 1em 0;
+    display: flex;
+    gap: 5px;
+}
+
+.tag {
+    color: white;
+    background-color: $principal-color;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: none;
 }

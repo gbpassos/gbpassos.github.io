@@ -1,18 +1,26 @@
+@import "../../css/global.scss";
 .container {
+    font-family: $font-family;
     background-color: #C1D37F;
     display: flex;
     flex-direction: column;
     padding: 2%;
+    width: 100%;
 }
 
 .title {
     text-align: center;
+    font-size: 12px;
 }
 
 .lista {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
     gap: 10px;
+    @media screen and (min-width: $medium) {
+        justify-content: space-around;
+        flex-direction: row;
+    }
 }

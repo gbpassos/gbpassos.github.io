@@ -26,6 +26,10 @@ div.container {
     }
     div.lista {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      gap: 2em;
+      @media screen and (min-width: $small) {
+        flex-direction: row;
+      }
     }
 }
