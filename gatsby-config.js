@@ -19,8 +19,16 @@ module.exports = {
         path: `${__dirname}/src/artigos`,
       }
     },
-    // "gatsby-plugin-image",
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",    
     "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'd2gx3w55',
+        dataset: 'production',
+        token: process.env.TOKEN
+      }
+    }
   ]
 };
