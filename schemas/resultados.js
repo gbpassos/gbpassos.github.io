@@ -42,29 +42,7 @@ export default {
           name: 'arquivos',
           title: 'Arquivos',
           type: 'array',
-          of: [
-              {
-                  name: 'filename',
-                  title: 'Nome do arquivo',
-                  fields: [
-                      {
-                        name: 'slug',
-                        title: 'Slug',
-                        type: 'slug',
-                        options: {
-                          source: 'name',
-                          maxLength: 96,
-                        },
-                    },
-                    {
-                        name: 'description',
-                        title: 'Descrição',
-                        type: 'string',
-                    }
-                  ],
-                  type: 'file'
-              }
-          ]
+          of: [ {type: 'file'} ],
       }
     ],
     preview: {
