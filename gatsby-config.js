@@ -27,7 +27,7 @@ module.exports = {
       options: {
         projectId: 'd2gx3w55',
         dataset: 'production',
-        token: process.env.TOKEN
+        token: process.env.token
       }
     }
   ]
