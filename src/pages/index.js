@@ -14,8 +14,8 @@ const IndexPage = ({data}) => {
         <title>{node.nome}</title>
         <Top>{node.nome}</Top>
         <Oque>{node.what}</Oque>
-        <Formacao cursos={node.formacao}/>
-        <Experiencia experiencias={node.experiencia}/>
+        <Formacao cursos={data.allSanityFormacao.edges}/>
+        <Experiencia experiencias={data.allSanityExperiencia.edges}/>
         <Resultados resultados={node.resultados}/>
       </main>
       ))}
@@ -46,6 +46,26 @@ export const query = graphql`
           pagina
           resumo
           titulo
+        }
+      }
+    }
+    allSanityFormacao(sort: {fields: year}) {
+      edges {
+        node {
+          year
+          where
+          icon
+        }
+      }
+    }
+    allSanityExperiencia {
+      edges {
+        node {
+          oque
+          descricao
+          categories {
+            title
+          }
         }
       }
     }

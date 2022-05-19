@@ -13,15 +13,15 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const result = await graphql(`
     query {
-        allMdx {
-          edges {
-            node {
-              id
-              frontmatter {
-                slug
+        allSanityPost {
+            edges {
+              node {
+                id
+                slug {
+                  current
+                }
               }
             }
-        }
         }
     }
       `)
@@ -31,9 +31,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           return;
       }
 
-      const projects = result.data.allMdx.edges;
+      const projects = result.data.allSanityPost.edges;
       projects.forEach(({ node: project }) => {
-          const slug = project.frontmatter.slug;
+          const slug = project.slug.current;
           const id = project.id;
           actions.createPage({
                 path: `/${slug}/`,

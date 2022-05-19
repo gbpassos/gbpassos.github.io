@@ -1,11 +1,9 @@
-$small: 640px;
-$medium: 940px;
+@import "../../css/global.scss";
 div.container {
     display: flex;
     flex-direction: column;
     background: #F0E2A3;
     width: 100%;
-    padding: 2%;
     overflow-x: auto;
     overflow-y: hidden;
     div.title {
@@ -25,6 +23,7 @@ div.container {
       }
     }
     div.lista {
+      margin: 0 5%;
       display: flex;
       flex-direction: column;
       gap: 2em;

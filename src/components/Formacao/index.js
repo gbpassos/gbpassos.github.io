@@ -11,8 +11,8 @@ const Formacao = ({cursos}) => {
                 <h1>Formação</h1>
             </div>
             <div className={style.lista}>
-                {cursos.map(curso => (
-                    <Curso ano={curso.quando} icon={curso.icon}>{curso.onde}</Curso>
+                {cursos.map(({node}) => (
+                    <Curso ano={node.year} icon={node.icon}>{node.where}</Curso>
                 ))}
             </div>
         </div>

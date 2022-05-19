@@ -9,8 +9,8 @@ const Atividade = ({titulo, tags, children}) => {
                 {children}
             </div>
             <div className={style.tag_container}>
-                {tags && tags.map((tag) => (
-                    <button className={style.tag}>{tag.trim()}</button>
+                {tags && tags.map(({title}) => (
+                    <button className={style.tag}>{title.trim()}</button>
                 ))}
             </div>
             <div className={style.showmore}>Mais</div>
