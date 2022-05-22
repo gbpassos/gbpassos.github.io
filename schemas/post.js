@@ -1,3 +1,5 @@
+import slugify from "slugify"
+
 export default {
   name: 'post',
   title: 'Post',
@@ -14,7 +16,7 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96,
+        slugify: (input) => `posts/${slugify(input, {lower: true})}`,
       },
     },
     {

@@ -18,6 +18,17 @@ export default {
         },
       },
       {
+        name: 'categoria',
+        title: 'Categoria',
+        type: 'array',
+        of: [
+          {
+            type: 'reference',
+            to: {type: 'category'},
+          },
+        ],
+      },
+      {
         name: 'image',
         title: 'Image',
         type: 'image',
@@ -28,21 +39,12 @@ export default {
       {
         name: 'descricao',
         title: 'Descrição',
-        type: 'array',
-        of: [
-          {
-            title: 'Block',
-            type: 'block',
-            styles: [{title: 'Normal', value: 'normal'}],
-            lists: [],
-          },
-        ],
+        type: 'blockContent',
       },
       {
           name: 'arquivos',
           title: 'Arquivos',
-          type: 'array',
-          of: [ {type: 'file'} ],
+          type: 'itensrelacionados',
       }
     ],
     preview: {

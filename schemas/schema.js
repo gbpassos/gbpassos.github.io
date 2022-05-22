@@ -13,6 +13,8 @@ import author from './author'
 import formacao from './formacao'
 import experiencia from './experiencia'
 import resultados from './resultados'
+import itensrelacionados from './itensrelacionados'
+import empresa from './empresa'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +35,7 @@ export default createSchema({
     formacao,
     experiencia,
     resultados,
+    itensrelacionados,
+    empresa,
   ]),
 })

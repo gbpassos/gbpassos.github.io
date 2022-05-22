@@ -27,6 +27,11 @@ export default {
           hotspot: true,
         },
       },
+      {
+        name: 'itemrelacionado',
+        title: 'Item relacionado',
+        type: 'itensrelacionados',
+      },
     ],
     preview: {
       select: {

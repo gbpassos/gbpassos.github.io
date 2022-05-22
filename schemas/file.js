@@ -1,8 +1,13 @@
 export default {
-    name: 'filename',
-    title: 'Nome do arquivo',
-    type: 'file',
+    name: 'arquivo',
+    title: 'Arquivo',
+    type: 'document',
     fields: [
+        {
+            name: 'name',
+            title: 'Título',
+            type: 'string',
+        },
         {
         name: 'slug',
         title: 'Slug',
@@ -11,11 +16,21 @@ export default {
             source: 'name',
             maxLength: 96,
         },
-    },
-    {
-        name: 'description',
-        title: 'Descrição',
-        type: 'string',
-    }
+        },
+        {
+            name: 'description',
+            title: 'Descrição',
+            type: 'string',
+        },
+        {
+            name: 'file',
+            title: 'Arquivo',
+            type: 'file',
+        }
     ],
+    preview: {
+        select: {
+            title: 'name',
+        }
+    }
 }
