@@ -60,6 +60,25 @@ export default {
               },
             ],
           },
+          {
+            name: 'internalLink',
+            type: 'object',
+            title: 'Referência Interna',
+            blockEditor: {
+              icon: () => 'R'
+            },
+            fields: [
+              {
+                name: 'reference',
+                title: 'Referência',
+                type: 'reference',
+                to: [
+                  { type: 'category' }
+                  // other types you may want to link to
+                ]
+              }
+            ]
+          },
         ],
       },
     },
