@@ -16,7 +16,7 @@ const IndexPage = ({data}) => {
         <Oque>{node.what}</Oque>
         <Formacao cursos={data.allSanityFormacao.edges}/>
         <Experiencia experiencias={data.allSanityExperiencia.edges}/>
-        <Resultados resultados={node.resultados}/>
+        <Resultados resultados={data.allSanityResultado.edges}/>
       </main>
       ))}
       </div>
@@ -49,7 +49,7 @@ export const query = graphql`
         }
       }
     }
-    allSanityFormacao(sort: {fields: year}) {
+    allSanityFormacao(sort: {fields: year, order: DESC}) {
       edges {
         node {
           year
@@ -65,6 +65,25 @@ export const query = graphql`
           descricao
           categories {
             title
+          }
+        }
+      }
+    }
+
+    allSanityResultado {
+      edges {
+        node {
+          titulo
+          descricao: _rawDescricao(resolveReferences: {maxDepth: 10})
+          image {
+            asset {
+              gatsbyImageData(fit: SCALE, placeholder: BLURRED, width: 400, height: 200)
+              publicUrl
+              url
+              resize(width: 100, height: 100, fit: CONTAIN) {
+                src
+              }
+            }
           }
         }
       }
