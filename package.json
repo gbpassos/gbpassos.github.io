@@ -20,7 +20,7 @@
     "@mdx-js/react": "v1",
     "@portabletext/react": "^1.0.6",
     "aws-sdk": "^2.1136.0",
-    "gatsby": "^4.13.1",
+    "gatsby": "^4.14.1",
     "gatsby-plugin-image": "^2.13.0",
     "gatsby-plugin-mdx": "^3.13.0",
     "gatsby-plugin-sanity-image": "^0.11.0",
