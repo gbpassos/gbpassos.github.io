@@ -19,7 +19,7 @@ tasks:
       yarn install
     command: yarn start
   
-vscode:
-  extensions:
-    - GitHub.copilot
+# vscode:
+#   extensions:
+#     - GitHub.copilot
 
