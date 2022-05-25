@@ -5,6 +5,7 @@ import Top from '../components/Top'
 import Oque from '../components/Oque'
 import Experiencia from "../components/Experiencia"
 import Resultados from "../components/Resultados"
+import Empresa from "../components/Empresa"
 
 const IndexPage = ({data}) => {
   return (
@@ -17,6 +18,9 @@ const IndexPage = ({data}) => {
         <Formacao cursos={data.allSanityFormacao.edges}/>
         <Experiencia experiencias={data.allSanityExperiencia.edges}/>
         <Resultados resultados={data.allSanityResultado.edges}/>
+        {data.allSanityEmpresa.edges.map(({node}) => (
+          <Empresa node={node}/>
+        ))}
       </main>
       ))}
       </div>
@@ -85,6 +89,19 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    allSanityEmpresa {
+      edges {
+        node {
+          logo {
+            asset {
+              gatsbyImageData
+            }
+          }
+          descricao: _rawDescricao(resolveReferences: {maxDepth: 10})
+          nome
         }
       }
     }
