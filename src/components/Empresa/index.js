@@ -1,12 +1,13 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { PortableText } from '@portabletext/react';
+import * as style from './empresa.module.scss'
 
 const Empresa = (props) => {
     const { logo, descricao, nome } = props.node
     return (
-        <div>
-            <GatsbyImage image={logo.asset.gatsbyImageData} alt={nome} />
+        <div className={style.card}>
+            <GatsbyImage image={logo.asset.gatsbyImageData} alt={nome}/>
             <h3>{nome}</h3>
             <PortableText value={descricao} />
         </div>
