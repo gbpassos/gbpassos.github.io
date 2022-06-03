@@ -1,11 +1,10 @@
 @import "../../css/global.scss";
 div.container {
+    font-family: $font-family;
     display: flex;
     flex-direction: column;
     background: #F0E2A3;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
     div.title {
       display: flex;
       flex-direction: row;

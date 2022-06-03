@@ -1,6 +1,6 @@
 @import "@/css/global.scss";
 div.container {
-    font-family: 'Libre Franklin', "Helvetica", "Arial", "sans-serif";
+    font-family: $font-family;
     font-size: 18px;
     height: 360px;
     display: flex;
@@ -8,7 +8,6 @@ div.container {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    overflow: hidden;
     background: url('@/assets/jigsaw.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,13 +68,11 @@ div.container {
         font-size: 70%;
       }
     }
-    img {
+    .foto {
       order: 1;
-      height: 205px;
       border-radius: 100%;
       background: #E2D58B;
       @media screen and (min-width: $small) {
-        height: 80%;
         align-self: flex-end;
         border-radius: 0px;
         background: none;
