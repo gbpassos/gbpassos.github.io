@@ -16,7 +16,7 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        slugify: (input) => `posts/${slugify(input, {lower: true})}`,
+        slugify: (input) => `${slugify(input, {lower: true})}`,
       },
     },
     {

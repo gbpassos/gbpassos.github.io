@@ -24,7 +24,7 @@ export default {
             type: 'slug',
             options: {
               source: 'nome',
-              slugify: (input) => `empresas/${slugify(input, {lower: true})}`,
+              slugify: (input) => `${slugify(input, {lower: true})}`,
             },
         },
         {
