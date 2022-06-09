@@ -87,6 +87,25 @@ export const query = graphql`
               }
             }
           }
+          arquivos {
+            ... on SanityPost {
+              id
+              slug {
+                current
+              }
+              _type
+            }
+            ... on SanityArquivo {
+              id
+              name
+              file {
+                asset {
+                  url
+                }
+              }
+              _type
+            }
+          }
         }
       }
     }

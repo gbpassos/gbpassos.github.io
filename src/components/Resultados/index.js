@@ -27,7 +27,7 @@ const Resultados = ({resultados}) => {
             <div className={style.lista}>
                 {
                     resultados.map(({node}) => (
-                        <Card titulo={node.titulo} link="/" imageSrc={node.image.asset.resize.src} gatsbyImageData={node.image.asset.gatsbyImageData}>
+                        <Card titulo={node.titulo} links={node.arquivos} imageSrc={node.image.asset.resize.src} gatsbyImageData={node.image.asset.gatsbyImageData}>
                             <PortableText value={node.descricao} />
                         </Card>
                     ))

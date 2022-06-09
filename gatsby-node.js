@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           const slug = project.slug.current;
           const id = project.id;
           actions.createPage({
-                path: `/${slug}/`,
+                path: `/artigo/${slug}/`,
                 component: require.resolve('./src/templates/project.js'),
                 context: { id }
           })
