@@ -1,0 +1,17 @@
+@import "../css/global.scss";
+.container {
+    font-family: $font-family;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 90%;
+    h1 {
+        font-size: 110%;
+    }
+    small {
+        font-size: 60%;
+    }
+    @media screen and (min-width: $small) {
+        max-width: 600px;
+    }
+    
+}

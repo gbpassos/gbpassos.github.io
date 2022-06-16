@@ -1,16 +1,18 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { PortableText } from '@portabletext/react';
+import * as styles from './post.module.scss';
 
 const ProjectTemplate = ({ data }) => {
     const node = data.allSanityPost.edges[0]?.node;
     return (
-        <div>
+        <div className={styles.container}>
           <Link to="/">Voltar</Link>
+          <GatsbyImage image={node.mainImage.asset.gatsbyImageData} alt={node.title}/>
+          <div><small>{node.mainImageSource}</small></div>
           <h1>{node.title}</h1>
           <div>{node.resumo}</div>
-          <img src={node.mainImage.asset.publicUrl} alt="imagem de capa do artigo"/>
-          <div><small>{node.mainImageSource}</small></div>
           <PortableText value={node.body} />
         </div>
     )
@@ -31,7 +33,7 @@ query($id:String!) {
         id
         mainImage {
           asset {
-            publicUrl
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }

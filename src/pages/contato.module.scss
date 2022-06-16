@@ -1,0 +1,22 @@
+@import "../css/global.scss";
+.container {
+    font-family: $font-family;
+    margin: 0 auto;
+    max-width: 600px;
+    label {
+        display: block;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    input, textarea {
+        width: calc(100% - 2*24px - 6px);
+        padding: 12px 24px;
+        border-radius: 6px;
+        border: 1px solid $principal-color;
+        background: white;
+        font-size: 16px;
+        outline: none;
+        resize: none;
+    }
+}
