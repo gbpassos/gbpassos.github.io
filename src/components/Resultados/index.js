@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { PortableText } from '@portabletext/react';
-import Botao from '../Botao'
 import Card from '../Card'
 import * as style from './resultados.module.scss'
 
