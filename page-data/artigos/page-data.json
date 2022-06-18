@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-artigos-index-js",
-    "path": "/artigos/",
-    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"September 30, 2021","title":"Como você gerencia seu negócio: pela exceção ou pela regra?"},"id":"12a511e7-cbe8-5927-a0a8-eca1c15ee23e","slug":"excecaoregra"},{"frontmatter":{"date":"September 22, 2021","title":"Os 3Es dos processos"},"id":"a09da828-e74c-5404-98ec-345bf7e49674","slug":"3esprocessos"},{"frontmatter":{"date":"September 18, 2014","title":"Cenários estratégicos do empreendedorismo"},"id":"453f89d0-a03c-5e91-b025-72db4855779b","slug":"cenariosestrategicos"}]}},"pageContext":{}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-pages-artigos-index-js","path":"/artigos/","result":{"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"September 30, 2021","title":"Como você gerencia seu negócio: pela exceção ou pela regra?"},"id":"b23b0cb9-e07f-59ee-84f2-43800db6d1c5","slug":"excecaoregra"},{"frontmatter":{"date":"September 22, 2021","title":"Os 3Es dos processos"},"id":"610743a7-7be6-551a-84f8-137528f7461b","slug":"3esprocessos"},{"frontmatter":{"date":"September 18, 2014","title":"Cenários estratégicos do empreendedorismo"},"id":"2e8d9df4-e0f1-5c74-8866-18aced4a51b4","slug":"cenariosestrategicos"}]}},"pageContext":{}},"staticQueryHashes":[]}
