@@ -1,11 +1,19 @@
 use yew::prelude::*;
+use gloo;
+use web_sys;
+use wasm_bindgen::JsCast;
+
+mod decks;
+use decks::apresentacao::Apresentacao;
 
 enum Msg {
     AddOne,
+    DoNothing,
 }
 
 struct Model {
     value: i64,
+    kbd_listener: Option<gloo::events::EventListener>,
 }
 
 impl Component for Model {
@@ -15,6 +23,7 @@ impl Component for Model {
     fn create(_ctx: &Context<Self>) -> Self {
         Self {
             value: 0,
+            kbd_listener: None,
         }
     }
 
@@ -26,6 +35,7 @@ impl Component for Model {
                 // re-render for it to appear on the page
                 true
             }
+            Msg::DoNothing => false
         }
     }
 
@@ -34,10 +44,26 @@ impl Component for Model {
         let link = ctx.link();
         html! {
             <div>
-                <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
+                <Apresentacao />
+                <Apresentacao />
+                // <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
                 <p>{ self.value }</p>
             </div>
         }
+    }
+
+    // https://github.com/yewstack/yew/issues/372
+    fn rendered(&mut self, ctx: &Context<Self>, first_render: bool) {
+        if !first_render {
+            return;
+        }
+        let document = gloo::utils::document();
+        let link = ctx.link().clone();
+        let listener = gloo::events::EventListener::new(&document, "keyup", move | event | {
+            let event = event.dyn_ref::<web_sys::KeyboardEvent>().unwrap();
+            gloo::console::log!(event.key_code());
+        });
+        self.kbd_listener.replace(listener);
     }
 }
 
