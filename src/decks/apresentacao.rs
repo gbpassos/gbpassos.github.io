@@ -1,6 +1,5 @@
 use yew::prelude::*;
 use stylist::{css, StyleSource, YieldStyle, Style};
-use stylist::yew::use_style;
 
 pub struct Apresentacao {
     nome: &'static str,

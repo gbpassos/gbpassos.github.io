@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19.3"
-stylist = { version="0.10.1", features = ["yew", "yew_use_style"] }
+stylist = { version="0.10.1", features = ["yew", "yew_use_style", "yew_integration"] }
 gloo = "0.8.0"
 web-sys = "0.3.58"
 wasm-bindgen = "0.2.81"

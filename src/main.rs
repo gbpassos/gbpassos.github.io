@@ -2,9 +2,13 @@ use yew::prelude::*;
 use gloo;
 use web_sys;
 use wasm_bindgen::JsCast;
+use stylist::Style;
 
 mod decks;
 use decks::apresentacao::Apresentacao;
+use decks::apresentacao2::Apresentacao as Apresentacao2;
+
+mod utils;
 
 enum Msg {
     AddOne,
@@ -57,20 +61,25 @@ impl Component for Model {
         }
     }
 
-    fn view(&self, ctx: &Context<Self>) -> Html {
+    fn view(&self, _ctx: &Context<Self>) -> Html {
         // This gives us a component's "`Scope`" which allows us to send messages, etc to the component.
-        let link = ctx.link();
+        // let link = ctx.link();
+        let style = Style::new(r#"
+            position: absolute;
+            top: 0;
+            left: 0;
+        "#).expect("Erro no css");
         html! {
             <div>
                 {
                     match self.value {
                         0 => html!{ <Apresentacao /> },
-                        1 => html!{ <Apresentacao /> },
+                        1 => html!{ <Apresentacao2 /> },
                         _ => html!{}
                     }
                 }
                 // <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
-                <p>{ self.value }</p>
+                <div class={style.get_class_name().to_owned()}>{ self.value }</div>
             </div>
         }
     }
