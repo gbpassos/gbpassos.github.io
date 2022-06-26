@@ -12,6 +12,7 @@ const ProjectTemplate = ({ data }) => {
           <GatsbyImage image={node.mainImage.asset.gatsbyImageData} alt={node.title}/>
           <div><small>{node.mainImageSource}</small></div>
           <h1>{node.title}</h1>
+          <small><b>Publicado em {node.publishedAt}</b></small>
           <div>{node.resumo}</div>
           <PortableText value={node.body} />
         </div>
@@ -24,6 +25,7 @@ query($id:String!) {
     edges {
       node {
         body: _rawBody(resolveReferences: {maxDepth: 10})
+        publishedAt(formatString: "DD/MM/YYYY")
         title
         slug {
           current
@@ -33,7 +35,7 @@ query($id:String!) {
         id
         mainImage {
           asset {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: FULL_WIDTH, height: 200)
           }
         }
       }
