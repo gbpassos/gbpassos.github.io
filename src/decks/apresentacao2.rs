@@ -50,7 +50,7 @@ impl Component for Apresentacao {
         html! {
             <div class={style.get_class_name().to_owned()}>
                 <div class={img_container.get_class_name().to_owned()}>
-                    <img class={img_style.get_class_name().to_owned()} src="./IMG_20190505_212405544 1.png" alt="me"/>
+                    <img class={img_style.get_class_name().to_owned()} src="./Gilberto400.png" alt="me"/>
                 </div>
                 <div>
                     <h1>{self.nome}</h1>
