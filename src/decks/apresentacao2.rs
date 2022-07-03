@@ -2,6 +2,7 @@ use yew::prelude::*;
 use stylist::Style;
 use super::CSS_ERROR_MSG;
 use super::foto_direita::FotoADireita;
+use super::experiencia::Experiencia;
 pub struct Apresentacao {
     nome: &'static str,
     historia: Vec<&'static str>,
@@ -47,6 +48,7 @@ impl Component for Apresentacao {
                     <div>
                         {self.proposito}
                     </div>
+                    <Experiencia/>
                 </div>
             </div>
         }

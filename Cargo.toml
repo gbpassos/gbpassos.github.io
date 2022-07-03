@@ -11,6 +11,8 @@ stylist = { version="0.10.1", features = ["yew", "yew_use_style", "yew_integrati
 gloo = "0.8.0"
 web-sys = "0.3.58"
 wasm-bindgen = "0.2.81"
+wasm-bindgen-futures = "0.4.31"
+serde = "1.0.138"
 
 [build-dependencies]
 image = "0.24.2"
