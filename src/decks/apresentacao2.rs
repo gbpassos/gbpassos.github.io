@@ -1,8 +1,7 @@
 use yew::prelude::*;
 use stylist::Style;
-
-static CSS_ERROR_MSG: &str = "Erro na formação do css";
-
+use super::CSS_ERROR_MSG;
+use super::foto_direita::FotoADireita;
 pub struct Apresentacao {
     nome: &'static str,
     historia: Vec<&'static str>,
@@ -22,7 +21,7 @@ impl Component for Apresentacao {
             proposito: r#"
             Ajudo empresas e profissionais a solucionarem seus problemas,
             viabilizando seu crescimento pessoal e profissional,
-            por meio de planos de ação focados na inovação"#
+            por meio de planos de ação focados na inovação e tecnologia"#
         }
     }
 
@@ -30,28 +29,14 @@ impl Component for Apresentacao {
         let padding: i32 = 2;
         let style = Style::new(format!(r#"
         width: calc(100% - 2*{padding}em);
-        height: calc(100% - 2*{padding}em);
         margin: 0 auto;
         padding: {padding}em;
         "#, padding = padding)).expect(CSS_ERROR_MSG);
-        let img_container = Style::new(r#"
-        width: 50%;
-        height: 100%;
-        float: right;
-        "#).expect(CSS_ERROR_MSG);
-        let img_style = Style::new(r#"
-        width: 100%;
-        margin-top: calc(100vh/2 - 100vw/4);
-        background-color: white;
-        width: 100%;
-        border-radius: 100%;
-        "#).expect(CSS_ERROR_MSG);
+
 
         html! {
             <div class={style.get_class_name().to_owned()}>
-                <div class={img_container.get_class_name().to_owned()}>
-                    <img class={img_style.get_class_name().to_owned()} src="./Gilberto400.png" alt="me"/>
-                </div>
+                <FotoADireita/>
                 <div>
                     <h1>{self.nome}</h1>
                     {

@@ -1,5 +1,7 @@
 use yew::prelude::*;
 use stylist::{css, StyleSource, YieldStyle, Style};
+use super::CSS_ERROR_MSG;
+use super::foto_direita::FotoADireita;
 
 pub struct Apresentacao {
     nome: &'static str,
@@ -43,23 +45,9 @@ impl Component for Apresentacao {
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         let style = self.style();
-        let img_container = Style::create("imgcontainer", r#"
-            width: 50%;
-            height: 100%;
-            float: right;
-        "#).expect("Erro no processamento do estilo");
-        let img_style = Style::new(css!(r#"
-            width: 100%;
-            margin-top: calc(100vh/2 - 100vw/4);
-            background-color: white;
-            width: 100%;
-            border-radius: 100%;
-        "#)).expect("erro");
         html! {
             <div class={style.get_class_name().to_owned()}>
-                <div class={img_container.get_class_name().to_owned()}>
-                    <img class={img_style.get_class_name().to_owned()} src="./Gilberto400.png" alt="me"/>
-                </div>
+                <FotoADireita/>
                 <div>
                     <h1>{self.nome}</h1>
                     <h2>{"Formação"}</h2>
